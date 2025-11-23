@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+body {
+    background-color: #1E2A38;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGO */
+#logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo img {
+    width: 250px;
+    max-width: 70%;
+}
+
+/* LAYOUT PRINCIPAL */
+nav section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+#conteudo-principal,
+#conteudo-secundario {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Parágrafos */
+p {
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* MENU */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#conteudo-menu ul li {
+    display: inline;
+    background-color: #CB0256;
+}
+
+#conteudo-menu ul a {
+    color: white;
+    text-decoration: none;
+}
+
+#conteudo-menu a:active {
+    background-color: #fff;
+    color: #CB0256;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.navegacao li a {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+/* SERVIÇOS */
+#servicos {
+    line-height: 1.5;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* RODAPÉ */
+#rodape {
+    text-align: center;
+    margin-top: 60px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+/* -----------------------------------------------------
+    RESPONSIVIDADE
+----------------------------------------------------- */
+
+/* Tablets e telas menores */
+@media (max-width: 900px) {
+
+    nav section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #conteudo-principal,
+    #conteudo-secundario {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .navegacao {
+        gap: 20px;
+    }
+
+    .navegacao li a {
+        width: 160px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    #logo img {
+        width: 180px;
+    }
+
+    nav section {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .navegacao li a {
+        width: 140px;
+        padding: 8px 0;
+        font-size: 13px;
+    }
+
+    #rodape {
+        font-size: 0.7em;
+        margin-top: 40px;
+    }
+}
+
+/* Celulares muito pequenos (tipo Galaxy Y / iPhone antigo) */
+@media (max-width: 400px) {
+
+    #logo img {
+        width: 150px;
+    }
+
+    .navegacao li a {
+        width: 120px;
+        font-size: 12px;
+    }
+}
