@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Relizado</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+<div class="container mt-5">
+
+    <div class="alert alert-success" role="alert">
+
+        <h4 class="alert-heading">Sucesso!</h4>
+
+        <p>Seu cadastro foi realizado com êxito!</p>
+
+        <hr>
+
+        <p class="mb-0">Clique no botão abaixo pra realizar um novo cadastro.</p> 
+    </div> <br>
+    <a href="{{url_for('registrar')}}" class="btn btn-primary">Novo Cadastro</a>
+</div>
+
+
+<!-- Carrega a versão "slim" do jQuery, uma dependência para alguns componentes do Bootstrap. -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<!-- Carrega o Popper.js, necessário para dicas de ferramentas e popovers do Bootstrap. -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.9.11/dist/umd/popper.min.js"></script>
+
+<!-- Carrega o JavaScript do Bootstrap, que ativa diversos componentes interativos do framework. -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
