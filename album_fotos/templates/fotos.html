@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de fotos</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<Style>
+
+.album-image {
+
+    width: auto;
+    object-fit: cover;
+}
+
+</Style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-dark bg-dark">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="/">Álbum de fotos</a>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <h1 class="mt-4">Álbum de Fotos</h1>
+        <div class="row row-cols-3">
+            {% for foto in fotos %}
+
+            <div class="col-md-4">
+
+                <div class="card mb-4">
+
+                    <img src="{{url_for('static', filename=foto.url)}}" alt="{{foto.titulo}}" class="card-img-top album-image">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">{{ foto.titulo }}</h5>
+
+                        <p class="card-text">{{foto.descricao}} </p>
+
+                        <a href="/foto/{{ foto.id }}" class="btn btn-primary">Detalhes</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            {% endfor %}
+        </div>    
+
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-3">
+
+        <div class="container text-center">
+
+             &copy; 2026  - Álbum de fotos
+         </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
